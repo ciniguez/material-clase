@@ -1,0 +1,14 @@
+.DS_Store
+/**/.DS_Store
+/**/build/*
+*.properties
+/.metadata/
+/**/target/*
+/**/.classpath
+/**/.settings/*
+
+.metadata/
+Servers/
+Servers2/
+/01_proyectoweb/.settings
+/**/bin/*
