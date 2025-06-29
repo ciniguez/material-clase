@@ -18,15 +18,13 @@
 	<%@include file='../templates/banner_inside.html'%>
 	
 	<h1>Listado de Personas</h1>
-	<!--  
-	<div>Bienvenido ${sessionScope.usuarioLogeado.getNombre()}</div>
-	<div><a href="LogoutController">Salir</a></div>
-	-->
+	
 	<div><a href="FrontController?ruta=nuevo">Nuevo</a></div>
 	
 	
     
 	<table class="table">
+	
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Id</th>
@@ -36,12 +34,15 @@
 		</tr>
 	</thead>
 
-		<c:forEach var="persona" items="${personas}">
+		<c:forEach var="persona" items="">
 			<tr>
-				<td scope="row">${persona.id}</td>
-				<td>${persona.nombre}</td>
-				<td>${persona.password}</td>
-				<td><a href="FrontController?ruta=actualizar&idPersona=${persona.id}">Actualizar</a> | <a href="FrontController?ruta=eliminar&idPersona=${persona.id}">Eliminar</a></td>
+				<td scope="row"></td>
+				<td></td>
+				<td></td>
+				<td>
+					<a href="">Actualizar</a> | 
+					<a href="">Eliminar</a>
+				</td>
 			</tr>
 		</c:forEach>
 

@@ -48,9 +48,21 @@ public class Persona implements Serializable {
 		this.password = password;
 	}
 	
+	// ********* Métodos (Reglas de Negocio) *******
+	
+	public List<Persona> getPersonas(){
+		if (personas == null) {
+			personas = new ArrayList<Persona>();
+			personas.add(new Persona(1, "Carlos", "carlos123"));
+			personas.add(new Persona(2, "Pedro", "pedro123"));
+			personas.add(new Persona(3, "Maria", "maria123"));
+		}
+		return personas;
+	}
+	
 	public Persona autorizar(String nombre, String clave) {
 		Persona personaAutorizada = null;
-		List<Persona> personas = getPersonas();
+		List<Persona> personas = this.getPersonas();
 		for (Persona persona : personas) {
 			if (persona.getNombre().equals(nombre) && persona.getPassword().equals(clave)) {
 
@@ -62,19 +74,17 @@ public class Persona implements Serializable {
 
 	}
 
-	public Persona getPersona(int IdPersona) {
-		Persona p = null;
-
-		List<Persona> listPeronas = this.getPersonas();
-		for (Persona persona : listPeronas) {
-			if (persona.getId() == IdPersona) {
-				p = persona;
+	public Persona getPersonaById(int id) {
+		Persona personaEncontrada = null;
+		for (Persona persona : this.getPersonas()) {
+			if (persona.getId() == id) {
+				personaEncontrada = persona;
 				break;
 			}
 		}
-		return p;
+		return personaEncontrada;
+	
 	}
-
 	public boolean create() {
 		//Generación del id (numero mas alto + 1 en el array)
 		int max = 0;
@@ -119,27 +129,5 @@ public class Persona implements Serializable {
 			}
 			return listPersonas.remove(indice);
 		}
-	}
-
-
-	public Persona getPersonaById(int id) {
-		Persona personaEncontrada = null;
-		for (Persona persona : this.getPersonas()) {
-			if (persona.getId() == id) {
-				personaEncontrada = persona;
-				break;
-			}
-		}
-		return personaEncontrada;
-
-	}
-	public List<Persona> getPersonas(){
-		if (personas == null) {
-			personas = new ArrayList<Persona>();
-			personas.add(new Persona(1, "Carlos", "carlos123"));
-			personas.add(new Persona(2, "Pedro", "pedro123"));
-			personas.add(new Persona(3, "Maria", "maria123"));
-		}
-		return personas;
 	}
 }

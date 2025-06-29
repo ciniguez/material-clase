@@ -15,7 +15,9 @@
 
 
 <div class="text-center">
+
 		<h1 class="fs-1 text-secondary">Algo fue mal!!</h1>
+
 		<p class="fs-4 text-danger">${mensaje}<p>
 		
 		<a href="${path}">Regresar</a>

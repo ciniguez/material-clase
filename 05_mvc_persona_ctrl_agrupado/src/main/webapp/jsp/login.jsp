@@ -21,38 +21,26 @@
 
 <%@include file='../templates/banner.html'%>
 
-<!-- Internacionalizacion -->
-<a href="login.jsp?locale=en">ingles</a>
-<a href="login.jsp?locale=es_ES">español</a>
-<a href="login.jsp?">auto</a>
-
-
-<c:if test="${param.locale!=null}">
-	<h1>${param.locale}</h1>
-    <fmt:setLocale value="${param.locale} scope=”session" />
-</c:if>
-<fmt:setBundle basename="recursos.idioma" />
-
-
 	<div class="wrapper">
 		<div id="formContent">
 
 			<!-- Login Form -->
-			<form action="../FrontController?ruta=autenticar" method="POST">
+			<form action="" method="POST">
+				
 				<fieldset>
-					<legend><fmt:message key="title.login.form"/></legend>
+					<legend>Inicio de Sesión</legend>
 
-					<p><fmt:message key="label.login.user"/>:</p>
-					<input type="text" name="usuario" />
+					<p>Usuario:</p>
+					<input type="text" name="usuario" /><br>
 					
-					<br>
-					<p><fmt:message key="label.login.pass"/>:</p>
+					<p>Contraseña:</p>
 					<input type="password" name="password" /> 
 					
 					<br><br><br>
-					<input type="submit"
-						value="<fmt:message key="label.login.enter"/>" />
+					
+					<input type="submit" value="Ingresar" />
 					<br><br><br>
+					
 				</fieldset>
 			</form>
 

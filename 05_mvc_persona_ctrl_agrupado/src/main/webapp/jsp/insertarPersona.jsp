@@ -11,7 +11,8 @@
 	rel="stylesheet"
 	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
 	crossorigin="anonymous">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
 
@@ -20,21 +21,32 @@
 
 
 	<div class="wrapper">
-	<div><a href="ListarPersonasController"> Ir a Menú Principal</a></div>
-		
+
+		<div>
+			<a href="ListarPersonasController"> Ir a Menú Principal</a>
+		</div>
+
 
 		<h1>Insertar Persona</h1>
-		<form method="POST" action="GestionarPersonaController?ruta=guardar">
-			<!--label for="txtId">Id</label--> <br>
+
+		<form method="POST" action="">
+
+			<!--label for="txtId">Id</label-->
+			<br> 
 			<input type="hidden" name="txtId" id="txtId" /> <br>
+
+			<label for="txtNombre">Nombre</label> <br> 
 			
-			<label for="txtNombre">Nombre</label> <br>
 			<input type="text" name="txtNombre" id="txtNombre" /><br> 
 			
 			<label for="txtClave">Clave</label><br>
+			
 			<input type="password" name="txtClave" id="txtClave" /> 
-			<br><br> 
-			<input type="submit" value="insertar"> 
+			
+			<br><br>
+			 
+			<input type="submit" value="insertar">
+
 		</form>
 
 
