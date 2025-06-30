@@ -23,13 +23,13 @@
 	<div class="wrapper">
 
 		<div>
-			<a href="ListarPersonasController"> Ir a Menú Principal</a>
+			<a href="GestionarPersonasController?ruta=listar">Ir a Menú principal</a><br>
 		</div>
 
 
 		<h1>Insertar Persona</h1>
 
-		<form method="POST" action="">
+		<form method="POST" action="GestionarPersonasController?ruta=guardar">
 
 			<!--label for="txtId">Id</label-->
 			<br> 

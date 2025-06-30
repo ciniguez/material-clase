@@ -24,7 +24,7 @@
 
 
 		<div>
-			<a href="">Ir a Menú principal</a><br>
+			<a href="GestionarPersonasController?ruta=listar">Ir a Menú principal</a><br>
 		</div>
 		<h1>Actualizar Persona</h1>
 		
