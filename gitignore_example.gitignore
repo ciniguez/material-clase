@@ -5,6 +5,7 @@
 /.metadata/
 /**/target/*
 /**/.classpath
+/**/.settings/*
 
 .metadata/
 Servers/
